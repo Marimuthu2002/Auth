@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <form class="mt-4" [formGroup]="SignupForm">
+      <div class="form-group">
+        <label for="UserName">UserName</label>
+        <input type="text" class="form-control" formControlName="userNamne">
+      </div>
+      <div class="form-group">
+        <label for="email">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+      </div>
+      <div>
+        <button class="btn btn-primary mt-2" type="button" (click)="loginToken()"
+          [disabled]="!SignupForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
